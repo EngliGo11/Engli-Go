@@ -19,7 +19,7 @@ const TODAS_LAS_PALABRAS = Object.values(TEMAS_PALABRAS)
 const CONFIG = {
   filas: 12,
   columnas: 12,
-  cantidadPalabras: 15, // cuántas palabras se esconden por partida
+  cantidadPalabras: 15, 
 };
  
 /* Las 8 direcciones posibles: [deltaFila, deltaColumna] */

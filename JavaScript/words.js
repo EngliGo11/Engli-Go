@@ -58,10 +58,10 @@ const TODAS_LAS_PALABRAS = Object.values(TEMAS_PALABRAS)
 --------------------------------------------------------- */
 const CONFIG = {
   vidasIniciales: 3,
-  puntosPorAcierto: 10,
+  puntosPorAcierto: 1,
   minLetrasFaltantes: 1,
   maxLetrasFaltantes: 3,
-  puntosParaGanar: 100,
+  puntosParaGanar: 10,
 };
  
 /* ---------------------------------------------------------
@@ -71,8 +71,8 @@ let estado = {
   vidas: CONFIG.vidasIniciales,
   puntaje: 0,
   jugando: false,
-  palabraActual: null,     // { en, es }
-  posicionesFaltantes: [], // índices de las letras ocultas, en orden
+  palabraActual: null,     
+  posicionesFaltantes: [],
 };
  
 /* ---------------------------------------------------------
@@ -294,4 +294,3 @@ function actualizarPuntajeHUD() {
    13. ARRANQUE
 --------------------------------------------------------- */
 iniciarJuego();
- 
