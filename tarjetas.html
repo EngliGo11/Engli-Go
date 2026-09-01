@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supporting material</title>
+
+    <link rel="icon" href="IMG/logo.png">
+
+    <link rel="stylesheet" href="CSS/tarjetas.css">
+    <link rel="stylesheet" href="CSS/menu.css">
+
+</head>
+<body>
+
+    <!-- Audios -->
+    <audio id="audioMenu" preload="auto">
+        <source src="audio/hover.mp3" type="audio/mpeg" />
+    </audio>
+    
+    <!-- MENÚ -->
+     
+    <aside>
+
+         <div class="brand-logo">
+           <img src="IMG/mascota.png" alt="Engli Go Logo">
+           <h2>Engli Go</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="menu-link">Home</a></li>
+                <li><a href="characters.html" class="menu-link">Characters</a></li>
+                <li><a href="sobrenosotros.html" class="menu-link">About us</a></li>
+                <li><a href="help.html" class="menu-link">Help</a></li>
+                <li><a href="Activity.html" class="menu-link">Learning resources</a></li>
+                <li><a href="Games.html" class="menu-link">Games</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+        <a href="register.html" class="register-btn">Sign Up</a>
+
+    <!-- tarjetas -->
+
+    <main class="contenido-final">
+
+    <section class="cards" id="cards">
+
+        <h2>What do you want to learn today?</h2>
+
+        <div class="contenedor-cards">
+
+            <article class="card">
+                    <a href="vocabulary.html" class="Vocabulary">
+                    <img src="IMG/vocabulary.png" alt="Vocabulary">
+                    </a>
+            </article>
+
+            <article class="card">
+                    <img src="IMG/lessons.png" alt="Lessons">
+            </article>
+
+            <article class="card">
+                    <img src="IMG/progress.png" alt="Progress">
+            </article>
+
+                <script src="JavaScript/script.js"></script>
+
+
+        </div>
+    </section>
+
+    <!-- footer-->
+
+    <footer class="footer">
+
+        <div class="footer-contenido">
+
+            <div class="footer-logo">
+                <img src="IMG/mascota.png" alt="EngliGo Logo">
+                <h2>EngliGo</h2>
+            </div>
+
+            <p class="eslogan">Learn English, Explore the Galaxy.</p>
+
+            <hr>
+
+            <p class="footer-info">
+                EngliGo is an educational platform designed to help students improve their English learning through enjoyable lessons and learning experiences.
+            </p>
+
+            <small class="copyright">
+                &copy; 2026 EngliGo. All rights reserved.
+            </small>
+
+        </div>
+    </footer>
+
+     <!-- JavaScript para audio -->
+    <script> const audioMenu = document.getElementById('audioMenu'); document.querySelectorAll('.menu-link').forEach(link => { link.addEventListener('mouseenter', () => { audioMenu.currentTime = 0; audioMenu.volume = 0.4; audioMenu.play(); }); }); </script>
+
+
+
+</body>
+</html>

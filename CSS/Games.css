@@ -1,0 +1,161 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  min-height: 100vh;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* =========================
+   FONDO
+========================= */
+
+#fondo-lessons {
+  position: fixed;
+  inset: -5%;
+  z-index: -1;
+
+  background-image: url('../IMG/fondojuegos.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation: moverFondo 5s ease-in-out infinite alternate;
+}
+
+@keyframes moverFondo {
+  from {
+    background-position: center;
+  }
+
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+#encabezado,
+#gridTemas {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+#encabezado {
+  text-align: center;
+  padding: 65px 20px 99px;
+}
+
+#encabezado h1 {
+  font-size: 58px;
+  margin-bottom: 35px;
+}
+
+#encabezado p {
+  font-size: 22px;
+  color: #f4f0ff;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+#gridTemas {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  justify-content: center;
+  gap: 65px;
+  padding: 15px 30px;
+}
+
+.tarjeta-tema {
+  --color-tema: #7c5cff;
+  --color-tema-suave: #7c5cff26;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--color-tema);
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.tarjeta-tema:hover {
+  transform: translateY(-7px);
+  box-shadow:
+    0 0 15px var(--color-tema),
+    0 0 30px var(--color-tema-suave);
+}
+
+/* =========================
+   IMAGEN
+========================= */
+
+.ilustracion {
+  height: 205px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--color-tema-suave);
+  overflow: hidden;
+}
+
+.ilustracion img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   PARTE INFERIOR
+========================= */
+
+.pie-tarjeta {
+  height: 95px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 12px;
+
+  background: #21143f;
+}
+
+.nombre-tema {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.boton-ir {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: var(--color-tema);
+
+  font-size: 23px;
+  font-weight: bold;
+}

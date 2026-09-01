@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Search - Engli Go</title>
+
+<link rel="icon" href="IMG/logo.png">
+
+<link rel="stylesheet" href="CSS/Wordsearch.css">
+
+</head>
+<body>
+ 
+  <div id="juego">
+ 
+    <!-- Fondo del juego. El equipo de diseño puede reemplazar esta capa
+         por una imagen real de espacio/galaxia vía CSS (background-image en #fondo) -->
+    <div id="fondo"></div>
+ 
+    <a href="Games.html" id="btn-volver">&#8592; Return</a>
+ 
+    <header id="encabezado-juego">
+      <h1>WORD SEARCH</h1>
+      <p>Find the hidden English words.</p>
+    </header>
+ 
+    <div id="contenido-juego">
+ 
+      <!-- La cuadrícula 12x12 se genera dinámicamente en word-search.js -->
+      <div id="cuadricula"></div>
+ 
+      <!-- Lista de palabras a encontrar, se genera dinámicamente -->
+      <div id="panel-lateral">
+        <h2>Seeks:</h2>
+        <ul id="lista-palabras"></ul>
+        <button id="btn-nueva-sopa">New word search</button>
+      </div>
+ 
+    </div>
+ 
+    <!-- Pantalla de victoria -->
+    <div id="pantalla-victoria" class="oculto">
+      <h2>¡You found all the words.!</h2>
+      <button id="btn-jugar-otra-vez">Play again</button>
+    </div>
+ 
+  </div>
+ 
+  <script src="JavaScript/Wordsearch.js"></script>
+</body>
+</html>

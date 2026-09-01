@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Games - Engli Go</title>
+
+<link rel="icon" href="IMG/logo.png">
+
+<link rel="stylesheet" href="CSS/Games.css">
+<link rel="stylesheet" href="CSS/menu.css">
+
+</head>
+<body>
+
+    <!-- Audios -->
+    <audio id="audioMenu" preload="auto">
+        <source src="audio/hover.mp3" type="audio/mpeg" />
+    </audio>
+    
+    <!-- MENÚ -->
+     
+    <aside>
+
+         <div class="brand-logo">
+           <img src="IMG/mascota.png" alt="Engli Go Logo">
+           <h2>Engli Go</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="menu-link">Home</a></li>
+                <li><a href="characters.html" class="menu-link">Characters</a></li>
+                <li><a href="sobrenosotros.html" class="menu-link">About us</a></li>
+                <li><a href="help.html" class="menu-link">Help</a></li>
+                <li><a href="Activity.html" class="menu-link">Learning resources</a></li>
+                <li><a href="Games.html" class="menu-link">Games</a></li>
+            </ul>
+        </nav>
+    </aside>
+ 
+  <div id="fondo-lessons"></div>
+ 
+  <header id="encabezado">
+    <h1>Games</h1>
+    <p>Learn English while playing.</p>
+  </header>
+ 
+  
+  <div id="gridTemas"></div>
+ 
+  <script src="JavaScript/Games.js"></script>
+
+   <!-- JavaScript para audio -->
+        <script> const audioMenu = document.getElementById('audioMenu'); document.querySelectorAll('.menu-link').forEach(link => { link.addEventListener('mouseenter', () => { audioMenu.currentTime = 0; audioMenu.volume = 0.4; audioMenu.play(); }); }); </script>
+
+</body>
+</html>

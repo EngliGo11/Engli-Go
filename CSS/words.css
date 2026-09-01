@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #2b103a;
+}
+
+#juego {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 50px;
+  overflow: hidden;
+}
+
+/* Fondo de pantalla completa con animación de movimiento suave */
+#fondo {
+  position: absolute;
+  inset: -20px;
+  z-index: -1;
+  background-image: url('../IMG/fondowords.png');
+  background-size: cover;
+  background-position: center;
+  animation: moverFondo 20s ease-in-out infinite alternate;
+}
+
+@keyframes moverFondo {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.05) translate(-10px, -10px); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+
+#btn-volver { 
+  position: absolute; 
+  top: 24px; 
+  left: 30px; 
+  z-index: 15; 
+  text-decoration: none; 
+  font-weight: 800; 
+  font-size: 18px; 
+  background: #FFF9FF; 
+  color: #4B3294; 
+  border: 3px solid #4B3294; 
+  padding: 12px 28px; 
+  border-radius: 999px; 
+  box-shadow: 0 5px 0 #7046C8; 
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+} 
+ 
+#btn-volver:hover { 
+  background: #7f5ec8; 
+  transform: translateY(-4px) scale(1.05); 
+  box-shadow: 0 9px 0 #392878; 
+} 
+ 
+#btn-volver:active { 
+  transform: translateY(2px) scale(0.98); 
+  box-shadow: 0 2px 0 #392878; 
+} 
+ 
+/* Encabezado */ 
+#encabezado-juego { 
+  text-align: center; 
+  padding-top: 25px; 
+} 
+ 
+#encabezado-juego h1 { 
+  font-size: 55px; 
+  color: #FFF9FF; 
+  text-shadow: 3px 3px 0px #4B3294, 0 0 20px rgba(112, 70, 200, 0.4); 
+  letter-spacing: 3px; 
+  font-weight: 900; 
+} 
+ 
+#encabezado-juego p { 
+  margin-top: 32px; 
+  font-size: 16px; 
+  color: #F8EFFF; 
+  text-transform: uppercase; 
+  font-weight: 800; 
+  letter-spacing: 2px; 
+  text-shadow: 2px 2px 0px #4B3294; 
+} 
+ 
+/* HUD (Vidas y Puntos) */ 
+#hud-juego { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%; 
+  padding: 0 30px; 
+} 
+ 
+#vidas { 
+  display: flex; 
+  gap: 10px; 
+  padding: 10px 24px; 
+  background: rgba(255, 249, 255, 0.95); 
+  border-radius: 999px; 
+  border: 3px solid #4B3294; 
+  box-shadow: 0 5px 0 #4B3294; 
+  font-size: 24px; 
+} 
+ 
+#puntaje { 
+  padding: 12px 28px; 
+  background: rgba(255, 249, 255, 0.95); 
+  border-radius: 999px; 
+  border: 3px solid #4B3294; 
+  font-weight: 800; 
+  color: #4B3294; 
+  box-shadow: 0 5px 0 #4B3294; 
+  font-size: 18px; 
+  letter-spacing: 0.5px; 
+} 
+ 
+#vidas span.vida { 
+  color: #b15ed8; 
+  text-shadow: 0 0 8px rgba(167, 65, 198, 0.6); 
+  transition: all 0.3s ease; 
+} 
+ 
+/* Corazones perdidos */ 
+#vidas span.vida-perdida { 
+  color: #8065B0; 
+  opacity: 0.3; 
+  transform: scale(0.85); 
+  transition: all 0.3s ease; 
+} 
+ 
+/* Zona de la palabra */ 
+#zona-palabra { 
+  text-align: center; 
+  padding: 10px 0; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 15px; 
+} 
+ 
+#palabra-mostrada { 
+  font-size: 72px; 
+  letter-spacing: 20px; 
+  color: #FFF9FF; 
+  text-shadow: 4px 4px 0px #4B3294, 0 0 25px rgba(255, 249, 255, 0.8); 
+  font-weight: 900; 
+} 
+ 
+/* Pista */ 
+#pista-espanol { 
+  font-size: 18px; 
+  color: #4B3294; 
+  font-weight: 800; 
+  background: #FFF9FF; 
+  padding: 8px 24px; 
+  border-radius: 999px; 
+  border: 3px solid #4B3294; 
+  box-shadow: 0 4px 0 #4B3294; 
+  display: inline-block; 
+} 
+ 
+/* Controles e input */ 
+#controles { 
+  display: flex; 
+  justify-content: center; 
+  padding-bottom: 30px; 
+} 
+ 
+#input-letras { 
+  width: 60%; 
+  max-width: 550px; 
+  padding: 18px 28px; 
+  text-align: center; 
+  outline: none; 
+  background: #FFF9FF; 
+  border: 3px solid #4B3294; 
+  border-radius: 999px; 
+  font-size: 18px; 
+  font-weight: 800; 
+  color: #4B3294; 
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.06), 0 6px 0 #4B3294; 
+  transition: all 0.2s ease; 
+} 
+ 
+#input-letras::placeholder { 
+  color: #814bd6; 
+  font-weight: 700; 
+} 
+ 
+#input-letras:focus { 
+  transform: translateY(-2px); 
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.06), 0 8px 0 #4B3294; 
+} 
+ 
+@keyframes sacudir-input { 
+  0%, 100% { transform: translateX(0); } 
+  25% { transform: translateX(-8px); } 
+  75% { transform: translateX(8px); } 
+} 
+ 
+#input-letras.incorrecto { 
+  animation: sacudir-input 0.3s; 
+  border-color: #6c5cff; 
+} 
+
+/* ==============================
+   PANTALLAS DE VICTORIA Y FIN
+============================== */
+
+#pantalla-victoria,
+#pantalla-fin {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: rgba(10, 10, 25, 0.85);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+}
+
+#pantalla-victoria h2,
+#pantalla-fin h2 {
+  font-size: 40px;
+  margin: 0;
+}
+
+#pantalla-victoria p,
+#pantalla-fin p {
+  font-size: 18px;
+  margin: 0;
+}
+
+#puntaje-victoria,
+#puntaje-final {
+  font-weight: bold;
+}
+
+/* Botones */
+
+#btn-seguir-jugando,
+#btn-reiniciar {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #81bdfc, #64b4f6);
+  color: #1b1440;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(82, 146, 209, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#btn-seguir-jugando:hover,
+#btn-reiniciar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(79, 147, 202, 0.6);
+}
+
+/* Ocultar */
+
+.oculto {
+  display: none !important;
+}

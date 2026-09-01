@@ -1,0 +1,260 @@
+/* ==========================
+    CONFIGURACION GENERAL
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #0b0b1a; 
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('../IMG/fondobody.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: movimientoEspacial 10s ease-in-out infinite alternate;
+}
+
+@keyframes movimientoEspacial {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+.contenido-final {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ==========================
+   REGISTRARSE
+========================== */
+
+.register-btn {
+    position: fixed;
+    top: 22px;
+    right: 28px;
+    padding: 13px 30px;
+    color: #ffffff;
+    background: linear-gradient(
+        135deg,
+        #2946a8,
+        #5936c9,
+        #315de0
+    );
+    border: 2px solid rgba(180, 190, 255, 0.75);
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    box-shadow:
+        0 0 10px rgba(93, 91, 255, 0.45),
+        0 0 25px rgba(74, 104, 255, 0.25),
+        inset 0 1px 2px rgba(255, 255, 255, 0.35);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    background: linear-gradient(
+        135deg,
+        #3c5ee8,
+        #7545df,
+        #3b8cff
+    );
+    border-color: #ffffff;
+    box-shadow:
+        0 0 12px rgba(130, 130, 255, 0.8),
+        0 0 30px rgba(80, 120, 255, 0.6),
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.register-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
+}
+
+.register-btn:hover::before {
+    left: 140%;
+}
+
+/* ==========================
+   TARJETAS
+========================== */
+
+.cards {
+    padding: 60px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-cards {
+    width: 100%;
+    max-width: 1200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 480px; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card:hover img {
+    filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.6));
+}
+
+/* ==========================
+   TÍTULO PRINCIPAL 
+========================== */
+
+.cards h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 2px; 
+    text-transform: uppercase; 
+    margin-bottom: 40px;
+    background: linear-gradient(135deg, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.6))
+            drop-shadow(0 0 35px rgba(168, 85, 247, 0.4));
+    animation: brilloEspacial 10s ease-in-out infinite alternate;
+}
+
+@keyframes brilloEspacial {
+    0% {
+        filter: drop-shadow(0 0 18px rgba(0, 217, 255, 0.5))
+                drop-shadow(0 0 30px rgba(168, 85, 247, 0.3));
+    }
+    100% {
+        filter: drop-shadow(0 0 26px rgba(0, 217, 255, 0.8))
+                drop-shadow(0 0 45px rgba(168, 85, 247, 0.6));
+    }
+}
+
+/* ==========================
+   FOOTER 
+========================== */
+
+.footer {
+    width: calc(100% + 200px);
+    margin-left: -200px;
+    margin-top: 40px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgba(10, 25, 50, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(0, 217, 255, 0.25);
+}
+
+.footer h3, .footer p {
+    margin: 6px 0;
+}
+
+.footer-contenido {
+    max-width: 650px; 
+    margin: 0 auto;  
+    width: 100%;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(0, 217, 255, 0.5));
+}
+
+.eslogan {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    color: #00d9ff;
+}
+
+.footer hr {
+    width: 100%;
+    border: none;
+    height: 2px;
+    margin: 20px auto;
+    background: linear-gradient(to right, transparent, #00d9ff, #7a5cff, transparent);
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.8);
+}
+
+.footer-info {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.copyright {
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 20px;
+}

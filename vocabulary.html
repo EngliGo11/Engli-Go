@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary</title>
+
+    <link rel="icon" href="IMG/logo.png">
+
+    <link rel="stylesheet" href="CSS/vocabulary.css">
+    <link rel="stylesheet" href="CSS/menu.css">
+
+</head>
+<body>
+
+    <!-- Audios -->
+    <audio id="audioMenu" preload="auto">
+        <source src="audio/hover.mp3" type="audio/mpeg" />
+    </audio>
+    
+    <!-- MENÚ -->
+    <aside>
+
+         <div class="brand-logo">
+           <img src="IMG/mascota.png" alt="Engli Go Logo">
+           <h2>Engli Go</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="menu-link">Home</a></li>
+                <li><a href="characters.html" class="menu-link">Characters</a></li>
+                <li><a href="sobrenosotros.html" class="menu-link">About us</a></li>
+                <li><a href="help.html" class="menu-link">Help</a></li>
+                <li><a href="Activity.html" class="menu-link">Learning resources</a></li>
+                <li><a href="Games.html" class="menu-link">Games</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    
+   <!-- tarjetas del vocabulario-->
+
+<main class="pantalla">
+
+  <div class="estrella" style="top:30px; left:40px;"></div>
+  <div class="estrella" style="top:70px; left:120px;"></div>
+  <div class="estrella estrella-amarilla" style="top:50px; right:60px;"></div>
+  <div class="estrella" style="top:140px; right:30px;"></div>
+  <div class="estrella" style="top:220px; left:25px;"></div>
+  <div class="estrella estrella-amarilla" style="top:260px; right:80px;"></div>
+
+  <header class="encabezado">
+    <h1>VOCABULARY</h1>
+    <p>Learn and practice English words.</p>
+  </header>
+
+  <section class="grid-temas" id="gridTemas"></section>
+
+</main>
+
+<script src="JavaScript/Vocabulario.js"></script>
+
+    <!-- JavaScript para audio -->
+    <script> const audioMenu = document.getElementById('audioMenu'); document.querySelectorAll('.menu-link').forEach(link => { link.addEventListener('mouseenter', () => { audioMenu.currentTime = 0; audioMenu.volume = 0.4; audioMenu.play(); }); }); </script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete the word- Engli Go</title>
+
+<link rel="stylesheet" href="tokens.css">
+
+<link rel="icon" href="IMG/logo.png">
+
+<link rel="stylesheet" href="CSS/words.css">
+
+</head>
+<body>
+ 
+  <div id="juego">
+ 
+    <!-- Fondo del juego. El equipo de diseño puede reemplazar esta capa
+         por una imagen real de espacio/galaxia vía CSS (background-image en #fondo) -->
+    <div id="fondo"></div>
+ 
+    <a href="Games.html" id="btn-volver">&#8592; Return</a>
+ 
+    <header id="encabezado-juego">
+      <h1>COMPLETE THE WORD</h1>
+      <p>Complete the word in English.</p>
+    </header>
+ 
+    <!-- HUD: vidas y puntaje -->
+    <div id="hud-juego">
+      <div id="vidas">
+        <!-- Los corazones se generan dinámicamente en planet-match.js -->
+      </div>
+      <div id="puntaje">Puntos: <span id="puntaje-valor">0</span></div>
+    </div>
+ 
+    <!-- La palabra con letras faltantes se muestra aquí, generada
+         dinámicamente. Cada letra faltante es un espacio en blanco;
+         el estudiante escribe abajo solo esas letras. -->
+    <div id="zona-palabra">
+      <div id="palabra-mostrada"></div>
+      <p id="pista-espanol"></p>
+    </div>
+ 
+    <div id="controles">
+      <input type="text" id="input-letras" placeholder="Escribe las letras que faltan..." autocomplete="off">
+    </div>
+ 
+    <!-- Pantalla de victoria: aparece al llegar a 100 puntos -->
+    <div id="pantalla-victoria" class="oculto">
+      <h2>¡YOU WIN!</h2>
+      <p>You arrived at <span id="puntaje-victoria">0</span> points</p>
+      <button id="btn-seguir-jugando">Keep playing</button>
+    </div>
+ 
+    <!-- Pantalla de fin de juego -->
+    <div id="pantalla-fin" class="oculto">
+      <h2>¡Game over!</h2>
+      <p>Final score: <span id="puntaje-final">0</span></p>
+      <button id="btn-reiniciar">Play again</button>
+    </div>
+ 
+  </div>
+ 
+  <script src="JavaScript/words.js"></script>
+</body>
+</html>
+ 

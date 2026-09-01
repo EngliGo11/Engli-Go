@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Meteor Challege - Engli Go</title>
+
+<link rel="icon" href="IMG/logo.png">
+
+<link rel="stylesheet" href="CSS/Meteorchallege.css">
+
+</head>
+<body>
+ 
+  <div id="juego">
+ 
+    
+    <div id="fondo"></div>
+ 
+    <a href="Games.html" id="btn-volver">&#8592; Volver</a>
+ 
+    
+    <div id="hud">
+      <div id="vidas">
+       
+      </div>
+      <div id="puntaje">Points: <span id="puntaje-valor">0</span></div>
+    </div>
+ 
+    
+    <div id="area-juego">
+      
+      <div id="astronauta">
+        <div id="astronauta-sprite"></div>
+      </div>
+      
+    </div>
+ 
+    
+    <div id="pantalla-fin" class="oculto">
+      <h2>¡Game over!</h2>
+      <p>Final score: <span id="puntaje-final">0</span></p>
+      <button id="btn-reiniciar">Play again</button>
+    </div>
+ 
+    
+    <div id="controles">
+      <input type="text" id="input-respuesta" placeholder="Escribe la traducción..." autocomplete="off">
+    </div>
+ 
+  </div>
+ 
+  <script src="JavaScript/meteorchallege.js"></script>
+</body>
+</html>

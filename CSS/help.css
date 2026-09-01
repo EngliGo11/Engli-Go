@@ -1,0 +1,145 @@
+/* ==========================
+   CONFIGURACIoN GENERAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #050505 url('../IMG/fondohelp.png') center / 120% auto fixed no-repeat;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+
+    animation: moverFondo 35s ease-in-out infinite alternate;
+}
+
+@keyframes moverFondo {
+    0% {
+        background-position: 40% 45%;
+        background-size: 120% auto;
+    }
+
+    50% {
+        background-position: 60% 55%;
+        background-size: 125% auto;
+    }
+
+    100% {
+        background-position: 45% 50%;
+        background-size: 120% auto;
+    }
+}
+
+/* ==========================
+   AYUDA
+========================== */
+
+.main-container {
+    width: 100%;
+    max-width: 1050px;
+    margin-left: 300px;
+    padding: 45px 40px;
+    box-sizing: border-box;
+}
+
+.header-title {
+    margin: 0 0 45px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #7ee7ff;
+    text-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
+}
+
+.help-section {
+    margin-bottom: 45px;
+}
+
+.section-heading {
+    margin: 0 0 18px;
+    color: #7ee7ff;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+}
+
+.interactive-card {
+    margin-bottom: 18px;
+    background: rgba(15, 30, 60, 0.78);
+    border: 1px solid rgba(0, 210, 255, 0.5);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 180, 255, 0.08);
+    transition: 0.3s ease;
+}
+
+.interactive-card:hover {
+    border-color: #00d9ff;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+summary {
+    padding: 22px 25px;
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+
+summary::after {
+    content: '＋';
+    float: right;
+    color: #65ddff;
+    font-size: 1.3rem;
+}
+
+details[open] summary::after {
+    content: '−';
+}
+
+.interactive-card p {
+    margin: 0;
+    padding: 0 25px 23px;
+    color: #b9cbe4;
+    line-height: 1.6;
+}
+
+.contact-card {
+    margin-top: 15px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(15, 25, 55, 0.75);
+    border: 1px solid rgba(0, 210, 255, 0.35);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 180, 255, 0.08);
+}
+
+.contact-card h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.contact-card .gmail {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 25px;
+    color: #ffffff;
+    background: rgba(0, 180, 255, 0.15);
+    border: 1px solid #00d9ff;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 0 12px rgba(0, 210, 255, 0.2);
+    transition: 0.3s ease;
+}
+
+.contact-card .gmail:hover {
+    background: rgba(0, 210, 255, 0.25);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.45);
+}

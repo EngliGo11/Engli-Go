@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters</title>
+
+    <link rel="icon" href="IMG/logo.png">
+    
+    <link rel="stylesheet" href="CSS/characters.css">
+    <link rel="stylesheet" href="CSS/menu.css">
+    
+
+</head>
+<body>
+    
+     <!-- Audios -->
+    <audio id="audioMenu" preload="auto">
+        <source src="audio/hover.mp3" type="audio/mpeg" />
+    </audio>
+    
+    <!-- MENÚ -->
+     
+    <aside>
+
+         <div class="brand-logo">
+           <img src="IMG/mascota.png" alt="Engli Go Logo">
+           <h2>Engli Go</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="menu-link">Home</a></li>
+                <li><a href="characters.html" class="menu-link">Characters</a></li>
+                <li><a href="sobrenosotros.html" class="menu-link">About us</a></li>
+                <li><a href="help.html" class="menu-link">Help</a></li>
+                <li><a href="Activity.html" class="menu-link">Learning resources</a></li>
+                <li><a href="Games.html" class="menu-link">Games</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Carrusel -->
+
+    <h1>Characters</h1>
+    <h2>✦Click on an image to explore ✦</h2>
+
+  <!-- Contenedor del carrusel -->
+
+  <div class="carrusel">
+
+    <!-- Botón para imagen anterior -->
+    <button onclick="anteriorImagen()">⏮</button>
+
+    <!-- Imagen que se muestra -->
+    <img id="imagenPrincipal" src="" alt="Imagen del carrusel">
+
+    <!-- Botón para imagen siguiente -->
+    <button onclick="siguienteImagen()">⏭</button>
+
+  </div>
+
+  <!-- Ventanas -->
+
+  <div id="AstroInfo" class="ventana-info">
+
+    <div class="contenido-info">
+        <button class="cerrar" onclick="cerrarInfo('AstroInfo')">✕</button>
+        <img src="IMG/astro.jpg" alt="Astro">
+        <h2>Astro</h2>
+        <p>
+            Astro is the signature character representing the child in their
+            digital adventure through EngliGo. We chose him because he offers
+            an innovative and eye-catching concept: an astronaut in outer space
+            with whom children aged 10 to 12 can identify and relate as they
+            explore a new language.
+        </p>
+    </div>
+
+    </div>
+
+
+   <div id="BloopInfo" class="ventana-info">
+
+    <div class="contenido-info">
+        <button class="cerrar" onclick="cerrarInfo('BloopInfo')">✕</button>
+        <img src="IMG/bloop.jpg" alt="Bloop">
+        <h2>Bloop</h2>
+        <p>Bloop is the EngliGo’s space-themed mascot and a faithful companion to 
+           children on their cosmic adventure as they learn English; chosen for 
+           his charismatic nature and language-related theme, he connects with students
+           in a natural, fun way, fulfilling the fundamental role of orienting, guiding, 
+           and supporting every user through all the lessons and challenges on the platform.</p>
+    </div>
+
+    </div>
+
+     <div id="ZebInfo" class="ventana-info">
+
+    <div class="contenido-info">
+        <button class="cerrar" onclick="cerrarInfo('ZebInfo')">✕</button>
+        <img src="IMG/zeb.png" alt="Bloop">
+        <h2>Zeb</h2>
+        <p>Zeb acts as a friendly guide within the progress section.
+           His main purpose is to accompany children throughout their learning journey. He is responsible
+           for showing their progress and celebrating every completed lesson.</p>
+    </div>
+
+    </div>
+  
+    <!-- JavaScript para audio -->
+    <script> const audioMenu = document.getElementById('audioMenu'); document.querySelectorAll('.menu-link').forEach(link => { link.addEventListener('mouseenter', () => { audioMenu.currentTime = 0; audioMenu.volume = 0.4; audioMenu.play(); }); }); </script>
+
+    <script src="JavaScript/script3.js"></script>
+
+</body>
+</html>   
